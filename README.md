@@ -6,6 +6,28 @@
 <a href="https://trendshift.io/repositories/15323" target="_blank"><img src="https://trendshift.io/api/badge/repositories/15323" alt="GeeeekExplorer%2Fnano-vllm | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
+# My Note
+
+My gpu is rtx 5090. `pip install flash-attn` installs the version which does not support rtx 50.
+Then my vllm conda env is
+torch 2.9.0 + cu128 + flash-attn 2.8.3 + python 3.12
+Then the example.py will fail because the library file does not match.
+
+Solution:
+```
+export TORCH_CUDA_ARCH_LIST="12.0"
+MAX_JOBS=$(nproc) pip install flash-attn --no-build-isolation --no-binary :all:
+```
+The first line ensures we only build the support for rtx 50 gpus, which leads to shorter time (30 seconds for my case).
+
+
+
+
+
+
+
+
+
 # Nano-vLLM
 
 A lightweight vLLM implementation built from scratch.
