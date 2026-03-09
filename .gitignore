@@ -1,3 +1,11 @@
+# Yongming added
+# I download the model weights from huggingface and put them in Qwen3-0.6B/
+Qwen3-0.6B/
+# I put notes in learning and include them in the repo
+# I added contents in README.md
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
