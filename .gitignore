@@ -4,6 +4,7 @@ Qwen3-0.6B/
 # I put notes in learning and include them in the repo
 # I added contents in README.md
 
+*.DS_Store
 
 
 # Byte-compiled / optimized / DLL files
